@@ -33,6 +33,8 @@ function display_shell_lineup(shell){
 }
 
 function on_sumbit_shell_lineup(){
+    shell_lineup = [];
+    
     var lineup = document.getElementById("blank-live");
     var lineup_value = lineup.value;
     var blankLives = lineup_value.split(",");
@@ -47,8 +49,6 @@ function on_sumbit_shell_lineup(){
     blankLabel.innerHTML = `<strong>Number of Blanks: ${num_of_blanks}</strong>`
     
     calculate_probability(num_of_blanks, num_of_lives)
-
-    shell_lineup = []
 
     for (var x = 0; x < (num_of_lives + num_of_blanks); x++) {
         shell_lineup.push(" ?")

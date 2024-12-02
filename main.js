@@ -48,6 +48,8 @@ function on_sumbit_shell_lineup(){
     
     calculate_probability(num_of_blanks, num_of_lives)
 
+    shell_lineup = []
+
     for (var x = 0; x < (num_of_lives + num_of_blanks); x++) {
         shell_lineup.push(" ?")
     }
